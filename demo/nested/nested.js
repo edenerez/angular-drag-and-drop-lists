@@ -6,11 +6,15 @@ angular.module("demo").controller("NestedListsDemoController", function($scope) 
     $scope.models = {
         selected: null,
         templates: [
-            {type: "item", id: 2},
-            {type: "container", id: 1, columns: [[], []]}
+            { type: "button", text: "click" },
+            { type: "checkbox", text: "check box item" },
+            { type: "textinput", id: "text" },
+            { type: "radio", id: "1", name: "rad", label: "first radio", value: "firstSelected" },
+            { type: "item", id: "2" },
+            { type: "container", id: 2, columns: [[], []] }
         ],
         dropzones: {
-            "A": [
+            "Page": [
                 {
                     "type": "container",
                     "id": 1,
@@ -23,6 +27,20 @@ angular.module("demo").controller("NestedListsDemoController", function($scope) 
                             {
                                 "type": "item",
                                 "id": "2"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": "9"
+                            },
+                            {
+                                "type": "item",
+                                "id": "10"
+                            },
+                            {
+                                "type": "item",
+                                "id": "11"
                             }
                         ],
                         [
@@ -46,70 +64,18 @@ angular.module("demo").controller("NestedListsDemoController", function($scope) 
                     "id": "6"
                 }
             ],
-            "B": [
+            "Controls": [
                 {
                     "type": "item",
-                    "id": 7
+                    "id": "Button"
                 },
                 {
                     "type": "item",
-                    "id": "8"
-                },
-                {
-                    "type": "container",
-                    "id": "2",
-                    "columns": [
-                        [
-                            {
-                                "type": "item",
-                                "id": "9"
-                            },
-                            {
-                                "type": "item",
-                                "id": "10"
-                            },
-                            {
-                                "type": "item",
-                                "id": "11"
-                            }
-                        ],
-                        [
-                            {
-                                "type": "item",
-                                "id": "12"
-                            },
-                            {
-                                "type": "container",
-                                "id": "3",
-                                "columns": [
-                                    [
-                                        {
-                                            "type": "item",
-                                            "id": "13"
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "type": "item",
-                                            "id": "14"
-                                        }
-                                    ]
-                                ]
-                            },
-                            {
-                                "type": "item",
-                                "id": "15"
-                            },
-                            {
-                                "type": "item",
-                                "id": "16"
-                            }
-                        ]
-                    ]
+                    "id": "Checkbox"
                 },
                 {
                     "type": "item",
-                    "id": 16
+                    "id": "Text"
                 }
             ]
         }

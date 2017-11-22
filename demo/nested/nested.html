@@ -32,10 +32,28 @@
     <div class="item">Item {{item.id}}</div>
 </script>
 
+<!-- Template for a controls -->
+<script type="text/ng-template" id="button.html">
+    <button>{{item.text}}</button>
+</script>
+<script type="text/ng-template" id="checkbox.html">
+    <input type="checkbox" checked> {{item.text}}
+</script>
+<script type="text/ng-template" id="textinput.html">
+    <input type="text" />
+</script>
+<script type="text/ng-template" id="radio.html">
+    <input type="radio" id="{{item.name}}_{{item.id}}"
+           name="{{item.name}}" value="{{item.value}}" />
+    <label for="{{item.name}}_{{item.id}}">
+        {{item.label}}
+    </label>
+</script>
+
 <!-- Main area with dropzones and source code -->
 <div class="col-md-10">
     <div class="row">
-        <div ng-repeat="(zone, list) in models.dropzones" class="col-md-6">
+        <div ng-repeat="(zone, list) in models.dropzones" class="col-md-12">
             <div class="dropzone box box-yellow">
                 <!-- The dropzone also uses the list template -->
                 <h3>Dropzone {{zone}}</h3>
